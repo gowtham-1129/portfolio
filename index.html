@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Gowtham N</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="login-page">
+        <div class="login-container">
+            <div class="login-box">
+                <h1 class="login-title">Welcome</h1>
+                <p class="login-subtitle">Enter your credentials to explore</p>
+                <form id="loginForm" class="login-form">
+                    <div class="input-group">
+                        <input type="text" id="username" placeholder="Username" required>
+                        <span class="input-icon">👤</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Password" required>
+                        <span class="input-icon">🔒</span>
+                    </div>
+                    <button type="submit" class="login-btn">Enter Portfolio</button>
+                </form>
+                <p class="hint">Hint: Use any username/password</p>
+            </div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Page -->
+    <div id="portfolioPage" class="portfolio-page hidden">
+        <nav class="navbar">
+            <div class="nav-brand">Gowtham N</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="logoutBtn" class="logout-btn">Logout</button></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h4 class="hero-title">Hi, I'm Gowtham N</h4>
+                <p class="hero-subtitle">Embedded Developer</p>
+                <p class="hero-description">Passionate about embedded systems programming and low-level development, creating efficient solutions with C and C++</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="avatar-container">
+                    <img src="profile.jpg" alt="Gowtham N" class="avatar-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I'm currently pursuing a Bachelor's degree in Computer Science, with graduation expected in 2026. My passion lies in embedded systems programming, particularly in Embedded C, where I enjoy working on low-level system development and hardware-software integration.</p>
+                        <p>I have hands-on experience in developing various projects including steganography applications, address book management systems, and MP3 taggers. These projects have helped me develop strong problem-solving skills and a deep understanding of system-level programming. I'm constantly exploring new technologies and eager to contribute to innovative solutions in the embedded systems domain.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">🐧</div>
+                        <h3>Linux</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">⚙️</div>
+                        <h3>C Programming</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🔧</div>
+                        <h3>C++</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">📊</div>
+                        <h3>Data Structures & Algorithms</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">📒</div>
+                        <div class="project-content">
+                            <h3>Address Book</h3>
+                            <p>A contact management system built with C programming for efficient storage and retrieval of contact information.</p>
+                            <div class="project-tags">
+                                <span>C</span>
+                                <span>Data Structures</span>
+                                <span>File Handling</span>
+                            </div>
+                            <a href="https://github.com/gowtham-1129/AddressBook" target="_blank" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">🔒</div>
+                        <div class="project-content">
+                            <h3>LSB Image Steganography</h3>
+                            <p>An image steganography tool using Least Significant Bit algorithm to hide secret messages within images.</p>
+                            <div class="project-tags">
+                                <span>C</span>
+                                <span>Image Processing</span>
+                                <span>Cryptography</span>
+                            </div>
+                            <a href="https://github.com/gowtham-1129/LSB-Image-Stegnography" target="_blank" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's work together</h3>
+                        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <span>gowtham9781@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📱</span>
+                                <span>+91 9150469781</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📍</span>
+                                <span>Rajapalayam, Virudhunagar, Tamil Nadu</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/gowtham-1129" target="_blank" class="social-link">GitHub</a>
+                            <a href="https://www.linkedin.com/in/gowtham-n-a509132a4" target="_blank" class="social-link">LinkedIn</a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="from_name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="reply_to" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Gowtham N. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
